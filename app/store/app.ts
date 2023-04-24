@@ -108,7 +108,7 @@ function countMessages(msgs: Message[]) {
   return msgs.reduce((pre, cur) => pre + cur.content.length, 0);
 }
 
-const LOCAL_KEY = "chat-next-web-store";
+const LOCAL_KEY = "water-droplet-store";
 
 export const useChatStore = create<ChatStore>()(
   persist(
