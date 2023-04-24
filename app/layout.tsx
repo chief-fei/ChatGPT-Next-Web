@@ -10,7 +10,7 @@ export const metadata = {
   title: "ChatGPT Next Web",
   description: "Your personal ChatGPT Chat Bot.",
   appleWebApp: {
-    title: "ChatGPT Next Web",
+    title: "水滴",
     statusBarStyle: "default",
   },
   themeColor: "#fafafa",
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <head>
         <meta
           name="viewport"
