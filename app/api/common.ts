@@ -30,6 +30,7 @@ export async function requestOpenai(req: NextRequest) {
         "OpenAI-Organization": process.env.OPENAI_ORG_ID,
       }),
     },
+    cache: "no-store",
     method: req.method,
     body: req.body,
   });
