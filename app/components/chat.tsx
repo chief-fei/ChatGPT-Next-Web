@@ -864,6 +864,10 @@ function _Chat() {
   }, [session.mask.context, session.mask.hideContext]);
   const accessStore = useAccessStore();
 
+  if (!accessStore.isAuthorized()) {
+    navigate(Path.Auth);
+  }
+
   if (
     context.length === 0 &&
     session.messages.at(0)?.content !== BOT_HELLO.content
