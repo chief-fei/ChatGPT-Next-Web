@@ -870,6 +870,7 @@ function _Chat() {
   ) {
     const copiedHello = Object.assign({}, BOT_HELLO);
     if (!accessStore.isAuthorized()) {
+      navigate(Path.Auth);
       copiedHello.content = Locale.Error.Unauthorized;
     }
     context.push(copiedHello);

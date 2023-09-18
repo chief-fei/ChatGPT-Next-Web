@@ -41,6 +41,18 @@ export const useAccessStore = createPersistStore(
     isAuthorized() {
       this.fetch();
 
+      console.log("%c !!get().token ::==>>", "color:#0067fa", !!get().token);
+      console.log(
+        "%c !!get().accessCode ::==>>",
+        "color:#0067fa",
+        !!get().accessCode,
+      );
+      console.log(
+        "%c !this.enabledAccessControl() ::==>>",
+        "color:#0067fa",
+        !this.enabledAccessControl(),
+      );
+
       // has token or has code or disabled access control
       return (
         !!get().token || !!get().accessCode || !this.enabledAccessControl()
